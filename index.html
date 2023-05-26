@@ -1,0 +1,70 @@
+<!DOCTYPE>
+<html>
+  <head>
+    <style>
+      h1{
+        color:blue;
+      }
+      span{
+        color:red;
+      }
+      button{
+        background-color:blue;
+        color:white;
+        border:1px solid blue;
+        border-radius:4px;
+        height:40px;
+        width:100px;
+      }
+      button:active{
+        background-color:red;
+        color:white;
+        border:1px solid blue;
+        border-radius:4px;
+        height:40px;
+        width:100px;
+      }
+      #i1{
+        border:2px solid red;
+        border-radius:4px;
+        color:blue;
+        font-weight:400
+      }
+      #result{
+        font-weight:200px;
+        color:blue;
+        width:90px;
+        text-align:center;
+      }
+      
+    </style>
+    <script>
+      function tab()
+        {
+      let num;
+      let r="";        num=document.getElementById("i1").value;
+          for(i=1;i<=10;i++)
+            {
+             r = r+num+"×"+i+"="+num*i+"<p>";
+            }
+          document.getElementById("result").innerHTML=r;
+        }
+      function reset(){
+        let r="";
+        document.getElementById("result").innerHTML=r;
+      }
+    </script>
+    
+    
+  </head>
+</html>
+
+<body>
+  <h1>MATHEMATICAL <span>TABLE</span></h1>
+
+  <h2>Enter number:</h2>
+  <input id="i1" type="number">
+  <button onclick="tab()">Generate</button>
+  <button onclick="reset()">Reset</button>
+  <div id="result"></div>
+</body>
